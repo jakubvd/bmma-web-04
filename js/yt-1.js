@@ -6,21 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
         thumbnailWrapper.addEventListener("click", () => {
             const iframe = document.createElement("iframe");
             iframe.className = "yt-lazy-iframe";
-            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
-            iframe.title = "YouTube video player";
-            iframe.frameBorder = "0";
-            iframe.allow =
-                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-            iframe.referrerPolicy = "strict-origin-when-cross-origin";
-            iframe.allowFullscreen = true;
+            iframe.setAttribute("src", `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`);
+            iframe.setAttribute("title", "YouTube video player");
+            iframe.setAttribute("frameborder", "0");
+            iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+            iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+            iframe.setAttribute("allowfullscreen", "");
 
-            // Ensure iframe replaces only the thumbnail, keeping its size
-            videoContainer.innerHTML = ""; // Remove thumbnail
+            // Remove the thumbnail & insert iframe
+            videoContainer.innerHTML = "";
             videoContainer.appendChild(iframe);
-
-            // Apply correct width/height immediately after adding
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
         });
     });
 });
