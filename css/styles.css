@@ -2,21 +2,48 @@
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Global Font Setup */
-  body {
+/* Global Font Setup */
+body {
     font-family: 'Satoshi Variable', Arial, sans-serif;
     font-weight: 400; /* Default weight */
-  }
-  
-  .form-input.is-select {
-  padding-right: 30px; /* Adjust padding to move the arrow */
-  appearance: none; /* Remove default browser styling */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background-image: url("https://cdn.prod.website-files.com/6775a0b27cf5e0d9b6728f11/677707faf896d32dfc6e7a41_bzik%20head%20black%20256px.png"); /* Optional custom arrow */
-  background-repeat: no-repeat;
-  background-position: right 12px center; /* Adjust arrow position */
-  background-size: 24px; /* Adjust the size of the arrow */
+}
+
+/* Custom Select Input Styling */
+.form-input.is-select {
+    padding-right: 30px; /* Adjust padding to move the arrow */
+    appearance: none; /* Remove default browser styling */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("https://cdn.prod.website-files.com/6775a0b27cf5e0d9b6728f11/677707faf896d32dfc6e7a41_bzik%20head%20black%20256px.png"); /* Optional custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* Adjust arrow position */
+    background-size: 24px; /* Adjust the size of the arrow */
+}
+
+/* YouTube Lazy Load Container */
+.yt-lazy-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Ensure the thumbnail fills the container */
+.yt-thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Make the YouTube iframe fill the entire container */
+.yt-lazy-iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
 }
