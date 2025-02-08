@@ -14,9 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
             iframe.referrerPolicy = "strict-origin-when-cross-origin";
             iframe.allowFullscreen = true;
 
-            // Replace the thumbnail with the YouTube iframe
-            videoContainer.innerHTML = "";
+            // Ensure iframe replaces only the thumbnail, keeping its size
+            videoContainer.innerHTML = ""; // Remove thumbnail
             videoContainer.appendChild(iframe);
+
+            // Apply correct width/height immediately after adding
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
         });
     });
 });
