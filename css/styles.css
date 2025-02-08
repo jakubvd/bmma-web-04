@@ -22,62 +22,46 @@ body {
     background-size: 24px; /* Adjust the size of the arrow */
 }
 
-/* Ensure the lazy container fills the Webflow Embed */
+/* Ensure the container fills the parent */
 .yt-lazy-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: absolute; /* Makes it fill the parent without extra space */
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-/* Make sure thumbnail also fills the space */
+/* Ensure the thumbnail fills the container */
 .yt-thumbnail-placeholder {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
 }
 
-/* Ensure iframe fully fills the Webflow Embed */
-.yt-lazy-iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-}
-
-/* Play Button - Ensure it's centered and on top */
+/* Custom Play Button */
 .yt-custom-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    background: rgba(13, 13, 13, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3;
-    pointer-events: none; /* Ensure click-through to parent */
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
-/* Ensure Play Button SVG is Centered */
-.yt-custom-play-button svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
-}
-
-/* Fix Thumbnail Layout */
-.yt-thumbnail-image {
-    display: block;  /* Prevents extra space below inline images */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.yt-custom-play-button::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
 }
