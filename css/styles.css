@@ -22,20 +22,28 @@ body {
     background-size: 24px; /* Adjust the size of the arrow */
 }
 
-/* Ensure the container fills the parent */
+/* Container for Lazy Load Video */
 .yt-lazy-container {
     position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    max-width: 560px; /* Set max-width based on layout */
+    aspect-ratio: 16 / 9;
     cursor: pointer;
 }
 
-/* Ensure the thumbnail fills the container */
+/* Thumbnail Placeholder */
 .yt-thumbnail-placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+/* Thumbnail Image */
+.yt-thumbnail-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -44,24 +52,30 @@ body {
 /* Custom Play Button */
 .yt-custom-play-button {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 60px;
     height: 60px;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
-.yt-custom-play-button::before {
+.yt-custom-play-button::after {
     content: "";
     width: 0;
     height: 0;
-    border-left: 20px solid white;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
+    border-left: 18px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    display: block;
+}
+
+/* Iframe Styling */
+.yt-lazy-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
