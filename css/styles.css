@@ -1,0 +1,22 @@
+/* Font Smoothing for Better Rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Global Font Setup */
+  body {
+    font-family: 'Satoshi Variable', Arial, sans-serif;
+    font-weight: 400; /* Default weight */
+  }
+  
+  .form-input.is-select {
+  padding-right: 30px; /* Adjust padding to move the arrow */
+  appearance: none; /* Remove default browser styling */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("https://cdn.prod.website-files.com/6775a0b27cf5e0d9b6728f11/677707faf896d32dfc6e7a41_bzik%20head%20black%20256px.png"); /* Optional custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Adjust arrow position */
+  background-size: 24px; /* Adjust the size of the arrow */
+}
