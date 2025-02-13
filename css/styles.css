@@ -80,7 +80,8 @@ body {
     border: none;
 }
 
-.historia-walk-table {
+/* Table Fight Record Styles */
+  .historia-walk-table {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -88,10 +89,9 @@ body {
     font-family: sans-serif;
   }
   
-  /* Header row */
   .historia-walk-table thead tr {
-    background-color: #000; 
-    color: #d4b071; /* gold text */
+    background-color: #000;
+    color: #d4b071;
   }
   
   .historia-walk-table th, 
@@ -101,19 +101,19 @@ body {
     border: 1px solid #333;
   }
   
-  /* Alternate row shading in the body */
   .historia-walk-table tbody tr:nth-child(odd) {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
+    color: #000;
   }
   
   .historia-walk-table tbody tr:nth-child(even) {
     background-color: #e9e9e9;
+    color: #000;
   }
   
-  /* Example “button” style for fight result */
   .fight-result {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
     font-weight: bold;
   }
@@ -124,6 +124,6 @@ body {
   }
   
   .fight-result.lose {
-    background-color: #666;
-    color: #fff;
+    background-color: #c0c0c0;
+    color: #000;
   }
