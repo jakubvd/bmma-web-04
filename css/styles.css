@@ -89,7 +89,7 @@ body {
     font-family: inherit;
   }
   
-  .historia-walk-table thead tr {
+  .fights-record-table thead tr {
     background-color: --var(--table-top-row);
     color: --var(--gold-2-light);
   }
