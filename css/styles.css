@@ -81,17 +81,17 @@ body {
 }
 
 /* Table Fight Record Styles */
-  .historia-walk-table {
-    width: 90%;
+  .fights-record-table {
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     border-collapse: collapse;
-    font-family: sans-serif;
+    font-family: inherit;
   }
   
   .historia-walk-table thead tr {
-    background-color: #000;
-    color: #d4b071;
+    background-color: --var(--table-top-row);
+    color: --var(--gold-2-light);
   }
   
   .historia-walk-table th, 
