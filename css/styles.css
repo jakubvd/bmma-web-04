@@ -123,7 +123,7 @@ body {
   
 /* Apply padding to all table cells */
 .fights-record-table tbody td {
-    padding: 20px 30px; /* 20px top/bottom, 30px left/right */
+    padding: 12px 30px; /* 20px top/bottom, 30px left/right */
 }
 
 /* Alternate row colors */
