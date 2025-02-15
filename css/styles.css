@@ -87,6 +87,8 @@ body {
     margin: 0 auto;
     border-collapse: separate; /* Allows border-radius on rows */
     border-spacing: 0; /* Removes gaps between cells */
+    border-top-left-radius: var(--corner);
+    border-top-right-radius: var(--corner);
 }
 
 /* Top row styling */
@@ -94,8 +96,6 @@ body {
     background-color: var(--table-top-row);
     color: var(--gold-2-light);
     margin-bottom: 20px;
-    border-top-left-radius: var(--corner);
-    border-top-right-radius: var(--corner);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
