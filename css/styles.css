@@ -126,10 +126,16 @@ body {
     padding: 20px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
-  
+
+/* Override padding for the first cell in the first row */
+.fights-record-table thead th:first-child {
+    padding-left: 20px; /* Reduce left padding to 20px */
+}
+
 /* Center-align only the last column title */
 .fights-record-table thead th:last-child {
     text-align: center;
+    padding-right: 20px; /* Reduce right padding to 20px */
 }
   
 /* Apply padding to all table cells */
@@ -140,6 +146,11 @@ body {
 /* Override padding for the first column */
 .fights-record-table tbody td:first-child {
     padding-left: 20px; /* Reduce left padding to 20px */
+}
+
+/* Override padding for the last column in table data */
+.fights-record-table tbody td:last-child {
+    padding-right: 20px; /* Reduce right padding to 20px */
 }
 
 /* Alternate row colors */
