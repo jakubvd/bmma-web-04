@@ -162,12 +162,12 @@ body {
 /* Fight Result Buttons */
 .fight-result {
     display: block; /* Ensures proper alignment inside the cell */
-    padding: 6px 12px;
+    padding: 3px 12px 4px 12px;
     border-radius: 4px;
     font-weight: 800;
     text-align: center;
     margin: 0 auto; /* Centers inside its cell */
-    width: fit-content; /* Ensures it only takes necessary space */
+    width: 150px; /* Ensures it only takes necessary space */
 }
   
 /* Gold (WIN) and Silver (LOSS) Tags */
