@@ -104,6 +104,16 @@ body {
     border-top-right-radius: 4px; /* Round top-right corner */
 }
 
+/* Add 4px corner radius to bottom left of the last row's first column */
+.fights-record-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+/* Add 4px corner radius to bottom right of the last row's last column */
+.fights-record-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
+}
+
 /* Align text in header row */
 .fights-record-table thead th {
     text-align: left;
@@ -162,12 +172,12 @@ body {
 /* Fight Result Buttons */
 .fight-result {
     display: block; /* Ensures proper alignment inside the cell */
-    padding: 3px 12px 4px 12px;
+    padding: 4px 12px 4px 12px;
     border-radius: 4px;
     font-weight: 800;
     text-align: center;
     margin: 0 auto; /* Centers inside its cell */
-    width: 150px; /* Ensures it only takes necessary space */
+    width: 140px; /* Ensures it only takes necessary space */
 }
   
 /* Gold (WIN) and Silver (LOSS) Tags */
