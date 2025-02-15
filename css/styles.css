@@ -137,6 +137,11 @@ body {
     padding: 12px 30px; /* 20px top/bottom, 30px left/right */
 }
 
+/* Override padding for the first column */
+.fights-record-table tbody td:first-child {
+    padding-left: 20px; /* Reduce left padding to 20px */
+}
+
 /* Alternate row colors */
 .fights-record-table tbody tr:nth-child(odd) {
     background-color: var(--table-row-light);
