@@ -79,3 +79,87 @@ body {
     height: 100%;
     border: none;
 }
+
+/* Table Fight Record Styles */
+.fights-record-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: separate; /* Allows border-radius on rows */
+    border-spacing: 0; /* Removes gaps between cells */
+    border-top-left-radius: var(--corner);
+    border-top-right-radius: var(--corner);
+}
+
+/* Top row styling */
+.fights-record-table thead tr {
+    background-color: var(--table-top-row);
+    color: var(--gold-2-light);
+    margin-bottom: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
+}
+
+/* Align text in header row */
+.fights-record-table thead th {
+    text-align: left;
+    font-family: Aspektavf, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gold-2-light);
+    padding: 20px 30px; /* 20px top/bottom, 30px left/right */
+}
+  
+/* Center-align only the last column title */
+.fights-record-table thead th:last-child {
+    text-align: center;
+}
+  
+/* Apply padding to all table cells */
+.fights-record-table tbody td {
+    padding: 20px 30px; /* 20px top/bottom, 30px left/right */
+}
+
+/* Alternate row colors */
+.fights-record-table tbody tr:nth-child(odd) {
+    background-color: var(--table-row-light);
+    color: #000;
+}
+.fights-record-table tbody tr:nth-child(even) {
+    background-color: var(--table-row-dark);
+    color: #000;
+}
+  
+/* Rounded corners applied to the first and last row as a whole */
+.fights-record-table thead tr:first-child {
+    border-radius: var(--corner);
+    overflow: hidden;
+}
+.fights-record-table tbody tr:first-child {
+    border-radius: var(--corner);
+    overflow: hidden;
+}
+.fights-record-table tbody tr:last-child {
+    border-radius: var(--corner);
+    overflow: hidden;
+}
+  
+/* Fight Result Buttons */
+.fight-result {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+  
+/* Gold (WIN) and Silver (LOSS) Tags */
+.fight-result.win {
+    background-color: var(--gold-2-light);
+    color: #000;
+}
+  
+.fight-result.lose {
+    background-color: var(--silver-1);
+    color: #000;
+}
