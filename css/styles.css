@@ -117,8 +117,8 @@ body {
 /* Align text in header row */
 .fights-record-table thead th {
     text-align: left;
-    font-family: Aspektavf, sans-serif;
-    font-size: 20px;
+    font-family: "Satoshi Variable", sans-serif;
+    font-size: 16px;
     line-height: 1;
     font-weight: 600;
     color: var(--gold-2-light);
