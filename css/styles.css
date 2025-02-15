@@ -110,7 +110,7 @@ body {
     font-family: Aspektavf, sans-serif;
     font-size: 20px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--gold-2-light);
     padding: 18px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
@@ -129,11 +129,11 @@ body {
 /* Alternate row colors */
 .fights-record-table tbody tr:nth-child(odd) {
     background-color: var(--table-row-light);
-    color: #000;
+    color: var(--bg-black);
 }
 .fights-record-table tbody tr:nth-child(even) {
     background-color: var(--table-row-dark);
-    color: #000;
+    color: var(--bg-black);
 }
   
 /* Rounded corners applied to the first and last row as a whole */
@@ -148,6 +148,15 @@ body {
 .fights-record-table tbody tr:last-child {
     border-radius: var(--corner);
     overflow: hidden;
+}
+
+.fights-record-table tbody td:nth-child(2),
+.fights-record-table tbody td:nth-child(3),
+.fights-record-table tbody td:nth-child(4),
+.fights-record-table tbody td:nth-child(5),
+.fights-record-table tbody td:nth-child(6) {
+    color: var(--bg-black-90);
+    
 }
   
 /* Fight Result Buttons */
@@ -179,7 +188,7 @@ body {
 
 /* Keep First Row (Headers) & Fight Result Tags Bold */
 .fights-record-table thead th {
-    font-weight: 800; /* Keep headers bold */
+    font-weight: 600; /* Keep headers bold */
 }
 
 .fight-result {
