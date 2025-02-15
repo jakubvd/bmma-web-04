@@ -93,7 +93,6 @@ body {
 .fights-record-table thead tr {
     background-color: var(--table-top-row);
     color: var(--gold-2-light);
-    border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
 
 /* Apply border-radius ONLY to the first row */
@@ -110,9 +109,11 @@ body {
     text-align: left;
     font-family: Aspektavf, sans-serif;
     font-size: 20px;
+    line-height: 1.2;
     font-weight: 400;
     color: var(--gold-2-light);
     padding: 20px 30px; /* 20px top/bottom, 30px left/right */
+    border-bottom: 2px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
   
 /* Center-align only the last column title */
@@ -155,6 +156,7 @@ body {
     padding: 6px 12px;
     border-radius: 4px;
     font-weight: bold;
+    margin-inline: auto;
 }
   
 /* Gold (WIN) and Silver (LOSS) Tags */
