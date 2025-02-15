@@ -110,7 +110,7 @@ body {
     font-family: Aspektavf, sans-serif;
     font-size: 20px;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 800;
     color: var(--gold-2-light);
     padding: 18px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
