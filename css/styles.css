@@ -222,3 +222,14 @@ body {
     font-weight: 800; /* Keep fight result tags bold */
     letter-spacing: 0.4px;
 }
+
+/* Styling for hover card content */
+.layout423_card-content {
+    opacity: 1;
+    transition: opacity 0.3s; /* Apply a transition to opacity changes */
+}
+
+/* Styling for the card content when it's inactive */
+.layout423_card-content.inactive {
+    opacity: 0;
+}

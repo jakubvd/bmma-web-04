@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Check if the screen width is above a certain threshold (e.g., 768px)
+    // Check if the screen width is above a certain threshold (e.g., 992p or above)
     if (window.innerWidth >= 992) {
         $(".layout423_card").hover(function() {
             // When a card is hovered over
