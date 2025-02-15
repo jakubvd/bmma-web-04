@@ -109,8 +109,8 @@ body {
     text-align: left;
     font-family: Aspektavf, sans-serif;
     font-size: 20px;
-    line-height: 1.2;
-    font-weight: 800;
+    line-height: 1;
+    font-weight: 600;
     color: var(--gold-2-light);
     padding: 18px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
@@ -152,11 +152,13 @@ body {
   
 /* Fight Result Buttons */
 .fight-result {
-    display: inline-block;
+    display: block; /* Ensures proper alignment inside the cell */
     padding: 6px 12px;
     border-radius: 4px;
-    font-weight: bold;
-    margin-inline: auto;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto; /* Centers inside its cell */
+    width: fit-content; /* Ensures it only takes necessary space */
 }
   
 /* Gold (WIN) and Silver (LOSS) Tags */
@@ -168,4 +170,18 @@ body {
 .fight-result.lose {
     background-color: var(--silver-1);
     color: var(--bg-black);
+}
+
+/* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
+.fights-record-table tbody td {
+    font-weight: 400; /* Set desired font weight for normal cells */
+}
+
+/* Keep First Row (Headers) & Fight Result Tags Bold */
+.fights-record-table thead th {
+    font-weight: 600; /* Keep headers bold */
+}
+
+.fight-result {
+    font-weight: 800; /* Keep fight result tags bold */
 }
