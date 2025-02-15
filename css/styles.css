@@ -87,18 +87,22 @@ body {
     margin: 0 auto;
     border-collapse: separate; /* Allows border-radius on rows */
     border-spacing: 0; /* Removes gaps between cells */
-    border-top-left-radius: var(--corner);
-    border-top-right-radius: var(--corner);
 }
 
 /* Top row styling */
 .fights-record-table thead tr {
     background-color: var(--table-top-row);
     color: var(--gold-2-light);
-    margin-bottom: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
+}
+
+/* Apply border-radius ONLY to the first row */
+.fights-record-table thead tr:first-child th:first-child {
+    border-top-left-radius: 4px; /* Round top-left corner */
+}
+
+.fights-record-table thead tr:first-child th:last-child {
+    border-top-right-radius: 4px; /* Round top-right corner */
 }
 
 /* Align text in header row */
