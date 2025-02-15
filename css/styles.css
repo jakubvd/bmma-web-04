@@ -120,9 +120,10 @@ body {
     font-family: "Satoshi Variable", sans-serif;
     font-size: 16px;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 800;
+    letter-spacing: 0.4px;
     color: var(--gold-2-light);
-    padding: 18px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
+    padding: 20px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
   
@@ -198,7 +199,7 @@ body {
 
 /* Keep First Row (Headers) & Fight Result Tags Bold */
 .fights-record-table thead th {
-    font-weight: 600; /* Keep headers bold */
+    font-weight: 800; /* Keep headers bold */
 }
 
 .fight-result {
