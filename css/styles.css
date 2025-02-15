@@ -224,12 +224,12 @@ body {
 }
 
 /* Styling for hover card content */
-.layout423_card-content {
+.hover_card_card-content {
     opacity: 1;
-    transition: opacity 0.3s; /* Apply a transition to opacity changes */
+    transition: opacity 0.3s ease-in; /* Apply a transition to opacity changes */
 }
 
 /* Styling for the card content when it's inactive */
-.layout423_card-content.inactive {
+.hover_card_card-content.inactive {
     opacity: 0;
 }
