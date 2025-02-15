@@ -112,8 +112,8 @@ body {
     line-height: 1.2;
     font-weight: 400;
     color: var(--gold-2-light);
-    padding: 20px 30px; /* 20px top/bottom, 30px left/right */
-    border-bottom: 2px solid var(--gold-50-op); /* Add stroke only at the bottom */
+    padding: 18px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
+    border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
   
 /* Center-align only the last column title */
@@ -161,11 +161,11 @@ body {
   
 /* Gold (WIN) and Silver (LOSS) Tags */
 .fight-result.win {
-    background-color: var(--gold-2-light);
-    color: #000;
+    background-color: var(--gold-tag);
+    color: var(--bg-black);
 }
   
 .fight-result.lose {
     background-color: var(--silver-1);
-    color: #000;
+    color: var(--bg-black);
 }
