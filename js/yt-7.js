@@ -1,5 +1,4 @@
-// to jest ok na ten moment najlesze rozwiązanie
-
+// nowa wersja
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".yt-lazy-container").forEach(function (videoContainer) {
         const videoId = videoContainer.getAttribute("data-video-id");
@@ -13,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
             "7gv8e54TxdU"  // PRZEGRAŁEM
         ];
 
-        // **Block recommendations for ALL videos, except those in allow-list**
+        // **Block recommendations for ALL videos, unless manually allowed**
         const isAllowed = allowRecommendations.includes(videoId);
-        const relValue = isAllowed ? "0" : "0"; // rel=0 (same channel) for allowed, block for others
+        const relValue = isAllowed ? "0" : "0"; // rel=0 only works for allowed videos
         const extraParams = isAllowed 
             ? "" 
-            : "&controls=1&modestbranding=1&showinfo=0&fs=0&iv_load_policy=3&disablekb=1"; // Blocks overlays
+            : "&controls=0&modestbranding=1&showinfo=0&fs=0&iv_load_policy=3&disablekb=1&playlist=" + videoId; // Blocks overlays
 
         function loadVideo() {
             // Remove existing iframe to prevent duplicates
@@ -34,15 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.referrerPolicy = "strict-origin-when-cross-origin";
             iframe.allowFullscreen = true;
 
+            // Ensure correct scaling inside parent div
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.objectFit = "contain"; // Ensures video fits properly
+
             // Append iframe inside the container
             videoContainer.appendChild(iframe);
-
-            // ❌ Block "More Videos" popups for all non-allowed videos
-            if (!isAllowed) {
-                setTimeout(() => {
-                    iframe.contentWindow.postMessage('{"event":"command","func":"hidePopups","args":""}', '*');
-                }, 2000); // Delay to ensure YouTube loads first
-            }
         }
 
         // Attach event listener to the play button

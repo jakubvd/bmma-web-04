@@ -1,10 +1,12 @@
+// to jest tez ok w miare
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".yt-lazy-container").forEach(function (videoContainer) {
         const videoId = videoContainer.getAttribute("data-video-id");
         const thumbnailWrapper = videoContainer.querySelector(".yt-thumbnail-placeholder");
         const playButton = videoContainer.querySelector(".yt-custom-play-button");
 
-        // List of video IDs that should show related videos from the same channel
+        // List of video IDs that should show related videos from the same channel - this is ok
         const showMoreVideos = [
             "xAKqXcG3b7k", // OSTATNI ODCINEK Z ŹYCIA BZIKA
             "wF2eobbOGrs", // jak wyjść z balachy ?
