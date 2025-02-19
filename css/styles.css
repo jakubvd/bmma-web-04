@@ -246,5 +246,5 @@ body {
 
 /* Styling for the home page hover card 3 columns when it's inactive */
 .hover_card_2cols_content.inactive {
-    opacity: 0;
+    opacity: 0.8;
 }
