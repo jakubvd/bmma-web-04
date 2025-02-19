@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // --- Helper to load the YouTube IFrame API (if needed) ---
+    // --- Helper to load YouTube IFrame API (if needed) ---
     let youtubeAPILoaded = false;
     let youtubeAPIReady = false;
+    
     function loadYouTubeAPI(callback) {
       if (youtubeAPIReady) {
         callback();
@@ -13,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
           var firstScriptTag = document.getElementsByTagName("script")[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         }
-        // Called by the API once it is ready:
-        window.onYouTubeIframeAPIReady = function() {
+        // Called by the API once it's ready:
+        window.onYouTubeIframeAPIReady = function () {
           youtubeAPIReady = true;
           callback();
         };
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const videoId = videoContainer.getAttribute("data-video-id");
       const playButton = videoContainer.querySelector(".yt-custom-play-button");
   
-      // List of video IDs that should show related videos (from the same channel)
+      // List of videos that should show related videos (from the same channel)
       const showMoreVideos = [
         "xAKqXcG3b7k", // OSTATNI ODCINEK Z ŹYCIA BZIKA
         "wF2eobbOGrs", // jak wyjść z balachy ?
@@ -34,16 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "7gv8e54TxdU"  // PRZEGRAŁEM
       ];
   
-      // Check if this video is one that should show recommendations.
+      // Check if this video should show related videos
       const isShowMoreVideo = showMoreVideos.includes(videoId);
   
       function loadVideo() {
-        // Clear out the container (removing thumbnail, play button, etc.)
+        // Clear out the container (remove thumbnail, play button, etc.)
         videoContainer.innerHTML = "";
   
         if (isShowMoreVideo) {
-          // --- For the specified videos, load a plain iframe.
-          // When the video ends, YouTube will show related videos (from the same channel) because of rel=0.
+          // --- For these videos, load a standard YouTube iframe with rel=0 ---
           const iframe = document.createElement("iframe");
           iframe.className = "yt-lazy-iframe";
           iframe.src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
@@ -54,10 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
           iframe.setAttribute("allowfullscreen", "");
           videoContainer.appendChild(iframe);
         } else {
-          // --- For all other videos, use the YouTube IFrame API.
-          // This lets us detect when the video ends so we can remove the player and hide recommendations.
+          // --- For all other videos, use the YouTube IFrame API to detect when the video ends ---
           loadYouTubeAPI(function () {
-            // Create a unique div ID for the player.
+            // Create a unique div ID for the player
             const playerDivId = "yt-player-" + videoId + "-" + Math.floor(Math.random() * 10000);
             const playerDiv = document.createElement("div");
             playerDiv.id = playerDivId;
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
               videoId: videoId,
               playerVars: {
                 autoplay: 1,
-                rel: 0, // Still set rel=0 (though YouTube’s default now limits suggestions to the same channel)
+                rel: 0, // Ensures related videos are from the same channel (but this alone doesn't hide them)
                 modestbranding: 1,
                 controls: 1,
                 showinfo: 0,
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
               },
               events: {
                 onStateChange: function (event) {
-                  // When the video ends, remove the player to avoid showing any recommendations.
+                  // When the video ends, remove the player so that no "More Videos" overlay appears
                   if (event.data === YT.PlayerState.ENDED) {
                     videoContainer.innerHTML = "";
                   }
@@ -88,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
   
-      // Attach the event listener to the play button.
+      // Attach the event listener to the play button
       playButton.addEventListener("click", loadVideo);
     });
   });
