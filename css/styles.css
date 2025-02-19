@@ -210,7 +210,7 @@ body {
 
 /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
 .fights-record-table tbody td {
-    font-weight: 800; /* Set desired font weight for normal cells */
+    font-weight: 700; /* Set desired font weight for normal cells */
 }
 
 /* Keep First Row (Headers) & Fight Result Tags Bold */
