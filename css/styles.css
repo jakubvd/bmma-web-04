@@ -27,6 +27,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 560px; /* Set max-width based on layout */
+    max-height: 315px; /* Set max-height based on layout */
     aspect-ratio: 16 / 9;
     cursor: pointer;
 }
