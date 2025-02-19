@@ -12,18 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
             "7gv8e54TxdU"  // PRZEGRAŁEM
         ];
 
-        // Determine if this video should show related videos or not
+        // Check if the video should show related videos from the same channel
         const isShowMoreVideo = showMoreVideos.includes(videoId);
-        
-        // Set rel=0 to show related videos from the same channel, or remove recommendations completely
-        const relValue = isShowMoreVideo ? "0" : "0"; // rel=0 for both, but other videos need extra prevention
-        const extraParams = isShowMoreVideo ? "" : "&controls=1&modestbranding=1&showinfo=0&fs=0&iv_load_policy=3&disablekb=1";
+
+        // rel=0 for the listed videos, and full restriction for others
+        const relValue = isShowMoreVideo ? "0" : "0";
+        const extraParams = isShowMoreVideo 
+            ? "" 
+            : "&modestbranding=1&controls=1&showinfo=0&fs=0&iv_load_policy=3&disablekb=1&playlist=" + videoId; // Playlist tricks YouTube to not show recommendations
 
         function loadVideo() {
-            // Remove any existing iframes inside the container to prevent duplicates
+            // Remove existing iframe to prevent duplicates
             videoContainer.innerHTML = "";
 
-            // Create a new iframe for YouTube
+            // Create a new iframe
             const iframe = document.createElement("iframe");
             iframe.setAttribute("class", "yt-lazy-iframe");
             iframe.setAttribute("src", `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=${relValue}${extraParams}`);
