@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- Helper to load YouTube IFrame API (if needed) ---
     let youtubeAPILoaded = false;
     let youtubeAPIReady = false;
-    
+  
     function loadYouTubeAPI(callback) {
       if (youtubeAPIReady) {
         callback();
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const videoId = videoContainer.getAttribute("data-video-id");
       const playButton = videoContainer.querySelector(".yt-custom-play-button");
   
-      // List of videos that should show related videos (from the same channel)
+      // List of video IDs that should show related videos (from the same channel)
       const showMoreVideos = [
         "xAKqXcG3b7k", // OSTATNI ODCINEK Z ŹYCIA BZIKA
         "wF2eobbOGrs", // jak wyjść z balachy ?
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
           iframe.setAttribute("allowfullscreen", "");
           videoContainer.appendChild(iframe);
         } else {
-          // --- For all other videos, use the YouTube IFrame API to detect when the video ends ---
+          // --- For all other videos, use the YouTube IFrame API to hide popups on pause & end ---
           loadYouTubeAPI(function () {
             // Create a unique div ID for the player
             const playerDivId = "yt-player-" + videoId + "-" + Math.floor(Math.random() * 10000);
@@ -62,23 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
             playerDiv.id = playerDivId;
             videoContainer.appendChild(playerDiv);
   
-            new YT.Player(playerDivId, {
+            let ytPlayer = new YT.Player(playerDivId, {
               videoId: videoId,
               playerVars: {
                 autoplay: 1,
-                rel: 0, // Ensures related videos are from the same channel (but this alone doesn't hide them)
+                rel: 0, // Ensures related videos are from the same channel (but this alone doesn't hide pop-ups)
                 modestbranding: 1,
                 controls: 1,
                 showinfo: 0,
                 fs: 0,
                 iv_load_policy: 3,
-                disablekb: 1
+                disablekb: 1,
+                enablejsapi: 1 // Required for controlling the iframe
               },
               events: {
                 onStateChange: function (event) {
-                  // When the video ends, remove the player so that no "More Videos" overlay appears
-                  if (event.data === YT.PlayerState.ENDED) {
-                    videoContainer.innerHTML = "";
+                  // When the video is paused or ends, hide overlays inside the iframe
+                  if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+                    ytPlayer.getIframe().contentWindow.postMessage('{"event":"command","func":"hidePopups","args":""}', '*');
                   }
                 }
               }
