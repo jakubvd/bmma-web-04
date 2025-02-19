@@ -1,4 +1,4 @@
-// nowa wersja
+// tutaj calkowicie usuwamy yt ui ale dalej pokazuja sie related vids
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".yt-lazy-container").forEach(function (videoContainer) {
         const videoId = videoContainer.getAttribute("data-video-id");

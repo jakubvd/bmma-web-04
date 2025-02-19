@@ -1,3 +1,4 @@
+// hover cards 3 columns
 $(document).ready(function() {
     // Check if the screen width is above a certain threshold (e.g., 992p or above)
     if (window.innerWidth >= 992) {
