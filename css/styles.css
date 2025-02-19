@@ -191,7 +191,7 @@ body {
     display: block; /* Ensures proper alignment inside the cell */
     padding: 4px 12px 4px 12px;
     border-radius: 4px;
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
     margin: 0 auto; /* Centers inside its cell */
     width: 140px; /* Ensures it only takes necessary space */
@@ -210,12 +210,12 @@ body {
 
 /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
 .fights-record-table tbody td {
-    font-weight: 700; /* Set desired font weight for normal cells */
+    font-weight: 800; /* Set desired font weight for normal cells */
 }
 
 /* Keep First Row (Headers) & Fight Result Tags Bold */
 .fights-record-table thead th {
-    font-weight: 800; /* Keep headers bold */
+    font-weight: 900; /* Keep headers bold */
 }
 
 .fight-result {
