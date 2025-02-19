@@ -32,11 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.referrerPolicy = "strict-origin-when-cross-origin";
             iframe.allowFullscreen = true;
 
-            // Ensure correct scaling inside parent div
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.objectFit = "contain"; // Ensures video fits properly
-
             // Append iframe inside the container
             videoContainer.appendChild(iframe);
 
