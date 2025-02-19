@@ -66,7 +66,7 @@ body {
     content: "";
     width: 0;
     height: 0;
-    border-left: 18px solid white;
+    border-left: 12px solid white;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     display: block;
@@ -120,7 +120,7 @@ body {
     font-family: "Satoshi Variable", sans-serif;
     font-size: 16px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.4px;
     color: var(--gold-2-light);
     padding: 20px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
@@ -191,7 +191,7 @@ body {
     display: block; /* Ensures proper alignment inside the cell */
     padding: 4px 12px 4px 12px;
     border-radius: 4px;
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
     margin: 0 auto; /* Centers inside its cell */
     width: 140px; /* Ensures it only takes necessary space */
@@ -210,26 +210,26 @@ body {
 
 /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
 .fights-record-table tbody td {
-    font-weight: 800; /* Set desired font weight for normal cells */
+    font-weight: 700; /* Set desired font weight for normal cells */
 }
 
 /* Keep First Row (Headers) & Fight Result Tags Bold */
 .fights-record-table thead th {
-    font-weight: 800; /* Keep headers bold */
+    font-weight: 700; /* Keep headers bold */
 }
 
 .fight-result {
-    font-weight: 800; /* Keep fight result tags bold */
+    font-weight: 700; /* Keep fight result tags bold */
     letter-spacing: 0.4px;
 }
 
-/* Styling for hover card content */
+/* Styling for home page hover card content */
 .hover_card_card-content {
     opacity: 1;
     transition: opacity 0.3s ease-in; /* Apply a transition to opacity changes */
 }
 
-/* Styling for the card content when it's inactive */
+/* Styling for the home page hover card when it's inactive */
 .hover_card_card-content.inactive {
     opacity: 0;
 }
