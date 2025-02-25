@@ -4,6 +4,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (max-width: 991px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+  }
+  
 /* Global Font Setup */
 body {
     font-family: 'Satoshi Variable', Arial, sans-serif;
