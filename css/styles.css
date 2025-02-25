@@ -127,7 +127,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.4px;
     color: var(--gold-2-light);
-    padding: 20px 30px 20px 30px; /* 18px top, 20px bottom, 30px left/right */
+    padding: 20px 30px 20px 30px; /* 20px horizontal, 30px vertical */
     border-bottom: 1px solid var(--gold-50-op); /* Add stroke only at the bottom */
 }
 
@@ -144,7 +144,7 @@ body {
   
 /* Apply padding to all table cells */
 .fights-record-table tbody td {
-    padding: 12px 30px; /* 20px top/bottom, 30px left/right */
+    padding: 12px 30px; /* 12px top/bottom, 30px left/right */
 }
 
 /* Override padding for the first column */
@@ -247,4 +247,78 @@ body {
 /* Styling for the home page hover card 3 columns when it's inactive */
 .hover_card_2cols_content.inactive {
     opacity: 0.5;
+}
+
+/* Adjust smaller breakpoints for better responsiveness */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+    /* Adjust header text size, weight, and spacing */
+    .fights-record-table thead th {
+        font-size: 15px; /* Reduce font size for better fit */
+        font-weight: 600; /* Maintain boldness */
+        letter-spacing: 0.3px; /* Adjust letter spacing for readability */
+        padding: 16px 20px 16px 20px; /* 16px top/bottom, 20px left/right */
+    }
+
+    /* Reduce left padding for the first column in the header row */
+    .fights-record-table thead th:first-child {
+        padding-left: 16px; /* Adjust left padding for alignment */
+    }
+
+    /* Reduce right padding and center-align last column title */
+    .fights-record-table thead th:last-child {
+        text-align: center; /* Keep last column title centered */
+        padding-right: 16px; /* Reduce right padding */
+    }
+
+    /* Apply general padding to all table data cells */
+    .fights-record-table tbody td {
+        padding: 12px 20px; /* 12px top/bottom, 20px left/right for compact layout */
+    }
+
+    /* Reduce left padding for the first column in table data */
+    .fights-record-table tbody td:first-child {
+        padding-left: 16px; /* Align with first header column */
+    }
+
+    /* Reduce right padding for the last column in table data */
+    .fights-record-table tbody td:last-child {
+        padding-right: 16px; /* Keep last column balanced */
+    }
+
+    /* Make text color slightly lighter and adjust weight for specific columns */
+    .fights-record-table tbody td:nth-child(2),
+    .fights-record-table tbody td:nth-child(3),
+    .fights-record-table tbody td:nth-child(4),
+    .fights-record-table tbody td:nth-child(5),
+    .fights-record-table tbody td:nth-child(6) {
+        color: var(--bg-black-90); /* Slightly lighter text */
+        font-weight: 500; /* Medium weight for better readability */
+    }
+
+    /* Adjust Fight Result Buttons (WIN/LOSS) */
+    .fight-result {
+        display: block; /* Ensures full-width alignment inside the cell */
+        padding: 4px 10px 4px 10px; /* 4px top/bottom, 10px left/right for compact look */
+        border-radius: 4px; /* Maintain rounded corners */
+        font-weight: 700; /* Make the result tags bold */
+        text-align: center; /* Center the text inside */
+        margin: 0 auto; /* Center the result tag inside its cell */
+        max-width: 120px; /* Limit the button width for uniform appearance */
+    }
+
+    /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
+    .fights-record-table tbody td {
+        font-weight: 600; /* Keep normal table text slightly bold */
+    }
+
+    /* Keep First Row (Headers) & Fight Result Tags Extra Bold */
+    .fights-record-table thead th {
+        font-weight: 800; /* Keep headers bold for emphasis */
+    }
+
+    .fight-result {
+        font-weight: 700; /* Keep fight result tags bold */
+        letter-spacing: 0.3px; /* Adjust spacing for readability */
+    }
 }
