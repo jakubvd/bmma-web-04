@@ -261,6 +261,14 @@ body {
         padding: 8px 10px 10px 8px; /* 10px top/bottom, 8px left/right */
     }
 
+    /* Hide column 4 (CZAS - Time) and column 5 (RD - Round) */
+    .fights-record-table thead th:nth-child(4),
+    .fights-record-table thead th:nth-child(5),
+    .fights-record-table tbody td:nth-child(4),
+    .fights-record-table tbody td:nth-child(5) {
+        display: none; /* Hide these columns on smaller screens */
+    }
+
     /* Reduce left padding for the first column in the header row */
     .fights-record-table thead th:first-child {
         padding-left: 8px; /* Adjust left padding for alignment */
@@ -290,8 +298,6 @@ body {
     /* Make text color slightly lighter and adjust weight for specific columns */
     .fights-record-table tbody td:nth-child(2),
     .fights-record-table tbody td:nth-child(3),
-    .fights-record-table tbody td:nth-child(4),
-    .fights-record-table tbody td:nth-child(5),
     .fights-record-table tbody td:nth-child(6) {
         color: var(--bg-black-90); /* Slightly lighter text */
         font-weight: 500; /* Medium weight for better readability */
