@@ -254,36 +254,36 @@ body {
 
     /* Adjust header text size, weight, and spacing */
     .fights-record-table thead th {
-        font-size: 15px; /* Reduce font size for better fit */
+        font-size: 14px; /* Reduce font size for better fit */
         font-weight: 600; /* Maintain boldness */
         letter-spacing: 0.3px; /* Adjust letter spacing for readability */
-        padding: 16px 20px 16px 20px; /* 16px top/bottom, 20px left/right */
+        padding: 12px 16px 12px 16px; /* 12px top/bottom, 16px left/right */
     }
 
     /* Reduce left padding for the first column in the header row */
     .fights-record-table thead th:first-child {
-        padding-left: 16px; /* Adjust left padding for alignment */
+        padding-left: 12px; /* Adjust left padding for alignment */
     }
 
     /* Reduce right padding and center-align last column title */
     .fights-record-table thead th:last-child {
         text-align: center; /* Keep last column title centered */
-        padding-right: 16px; /* Reduce right padding */
+        padding-right: 12px; /* Reduce right padding */
     }
 
     /* Apply general padding to all table data cells */
     .fights-record-table tbody td {
-        padding: 12px 20px; /* 12px top/bottom, 20px left/right for compact layout */
+        padding: 12px 16px; /* 12px top/bottom, 16px left/right for compact layout */
     }
 
     /* Reduce left padding for the first column in table data */
     .fights-record-table tbody td:first-child {
-        padding-left: 16px; /* Align with first header column */
+        padding-left: 12px; /* Align with first header column */
     }
 
     /* Reduce right padding for the last column in table data */
     .fights-record-table tbody td:last-child {
-        padding-right: 16px; /* Keep last column balanced */
+        padding-right: 12px; /* Keep last column balanced */
     }
 
     /* Make text color slightly lighter and adjust weight for specific columns */
@@ -299,7 +299,7 @@ body {
     /* Adjust Fight Result Buttons (WIN/LOSS) */
     .fight-result {
         display: block; /* Ensures full-width alignment inside the cell */
-        padding: 4px 10px 4px 10px; /* 4px top/bottom, 10px left/right for compact look */
+        padding: 4px 80px 4px 8px; /* 4px top/bottom, 8px left/right for compact look */
         border-radius: 4px; /* Maintain rounded corners */
         font-weight: 700; /* Make the result tags bold */
         text-align: center; /* Center the text inside */
