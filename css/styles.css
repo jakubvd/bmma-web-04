@@ -299,7 +299,7 @@ body {
     /* Adjust Fight Result Buttons (WIN/LOSS) */
     .fight-result {
         display: block; /* Ensures full-width alignment inside the cell */
-        padding: 4px 80px 4px 8px; /* 4px top/bottom, 8px left/right for compact look */
+        padding: 4px 8px 4px 8px; /* 4px top/bottom, 8px left/right for compact look */
         border-radius: 4px; /* Maintain rounded corners */
         font-weight: 700; /* Make the result tags bold */
         text-align: center; /* Center the text inside */
