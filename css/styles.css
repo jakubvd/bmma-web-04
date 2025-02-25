@@ -258,7 +258,7 @@ body {
         font-size: 12px; /* Reduce font size for better fit */
         font-weight: 600; /* Maintain boldness */
         letter-spacing: 0.2px; /* Adjust letter spacing for readability */
-        padding: 8px 10px 10px 8px; /* 10px top/bottom, 8px left/right */
+        padding: 6px 10px 10px 6px; /* 10px top/bottom, 6px left/right */
     }
 
     /* Hide column 4 (CZAS - Time) and column 5 (RD - Round) */
@@ -271,18 +271,18 @@ body {
 
     /* Reduce left padding for the first column in the header row */
     .fights-record-table thead th:first-child {
-        padding-left: 8px; /* Adjust left padding for alignment */
+        padding-left: 6px; /* Adjust left padding for alignment */
     }
 
     /* Reduce right padding and center-align last column title */
     .fights-record-table thead th:last-child {
         text-align: center; /* Keep last column title centered */
-        padding-right: 8px; /* Reduce right padding */
+        padding-right: 6px; /* Reduce right padding */
     }
 
     /* Apply general padding to all table data cells */
     .fights-record-table tbody td {
-        padding: 10px 8px; /* 10px top/bottom, 8px left/right for compact layout */
+        padding: 10px 6px; /* 10px top/bottom, 6px left/right for compact layout */
     }
 
     /* Reduce left padding for the first column in table data */
@@ -306,7 +306,7 @@ body {
     /* Adjust Fight Result Buttons (WIN/LOSS) */
     .fight-result {
         display: block; /* Ensures full-width alignment inside the cell */
-        padding: 4px 6px 4px 6px; /* 4px top/bottom, 6px left/right for compact look */
+        padding: 4px 4px 4px 4px; /* 4px top/bottom, 4px left/right for compact look */
         border-radius: 4px; /* Maintain rounded corners */
         font-weight: 700; /* Make the result tags bold */
         text-align: center; /* Center the text inside */
