@@ -9,7 +9,7 @@
         -webkit-tap-highlight-color: transparent;
     }
   }
-  
+
 /* Global Font Setup */
 body {
     font-family: 'Satoshi Variable', Arial, sans-serif;
@@ -257,7 +257,87 @@ body {
 
 /* Adjust smaller breakpoints for better responsiveness */
 
-@media screen and (max-width: 767px) and (min-width: 480px) {
+@media screen and (max-width: 478px) {
+
+    /* Make the table responsive within its parent container */
+    .fights-record-table {
+        width: 100%; /* Ensure table doesn't overflow */
+        max-width: 100%; /* Prevent exceeding parent div */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        display: block; /* Prevent table from breaking */
+    }
+
+    /* Adjust header text size, weight, and spacing */
+    .fights-record-table thead th {
+        font-size: 12px; /* Reduce font size for better fit */
+        font-weight: 700; /* Keep headers bold for emphasis */
+        letter-spacing: 0.2px; /* Adjust letter spacing for readability */
+        padding: 8px 10px 10px 8px; /* 8px top, 10px right, 10px bottom, 8px left */
+    }
+
+    /* Hide column 3 (DATA - Date), column 4 (CZAS - Time), and column 5 (RD - Round) */
+    .fights-record-table thead th:nth-child(3),
+    .fights-record-table thead th:nth-child(4),
+    .fights-record-table thead th:nth-child(5),
+    .fights-record-table tbody td:nth-child(3),
+    .fights-record-table tbody td:nth-child(4),
+    .fights-record-table tbody td:nth-child(5) {
+        display: none; /* Hide these columns on smaller screens */
+    }
+
+    /* Reduce left padding for the first column in the header row */
+    .fights-record-table thead th:first-child {
+        padding-left: 8px; /* Adjust left padding for alignment */
+    }
+
+    /* Reduce right padding and center-align last column title */
+    .fights-record-table thead th:last-child {
+        text-align: center; /* Keep last column title centered */
+        padding-right: 8px; /* Reduce right padding */
+    }
+
+    /* Apply general padding to all table data cells */
+    .fights-record-table tbody td {
+        padding: 10px 4px; /* 10px top/bottom, 4px left/right for compact layout */
+    }
+
+    /* Reduce left padding for the first column in table data */
+    .fights-record-table tbody td:first-child {
+        padding-left: 8px; /* Align with first header column */
+    }
+
+    /* Reduce right padding for the last column in table data */
+    .fights-record-table tbody td:last-child {
+        padding-right: 8px; /* Keep last column balanced */
+    }
+
+    /* Make text color slightly lighter and adjust weight for specific columns */
+    .fights-record-table tbody td:nth-child(2),
+    .fights-record-table tbody td:nth-child(6) {
+        color: var(--bg-black-90); /* Slightly lighter text */
+        font-weight: 400; /* Medium weight for better readability */
+    }
+
+    /* Adjust Fight Result Buttons (WIN/LOSS) */
+    .fight-result {
+        display: block; /* Ensures full-width alignment inside the cell */
+        padding: 2px 2px 2px 2px; /* 2px top/bottom, 2px left/right for compact look */
+        border-radius: 4px; /* Maintain rounded corners */
+        font-size: 12px; /* Reduce font size for better fit */
+        font-weight: 600; /* Keep fight result tags bold */
+        text-align: center; /* Center the text inside */
+        margin: 0 auto; /* Center the result tag inside its cell */
+        max-width: 100px; /* Limit the button width for uniform appearance */
+    }
+
+    /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
+    .fights-record-table tbody td {
+        font-size: 12px; /* Reduce font size for better fit */
+        font-weight: 500; /* Keep normal table text slightly bold */
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 479px) {
 
     /* Adjust header text size, weight, and spacing */
     .fights-record-table thead th {
