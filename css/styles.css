@@ -269,10 +269,10 @@ body {
 
     /* Adjust header text size, weight, and spacing */
     .fights-record-table thead th {
-        font-size: 12px; /* Reduce font size for better fit */
+        font-size: 13px; /* Reduce font size for better fit */
         font-weight: 700; /* Keep headers bold for emphasis */
         letter-spacing: 0.2px; /* Adjust letter spacing for readability */
-        padding: 8px 10px 10px 8px; /* 8px top, 10px right, 10px bottom, 8px left */
+        padding: 10px 10px 10px 10px; /* 8px top, 10px right, 10px bottom, 8px left */
     }
 
     /* Hide column 3 (DATA - Date), column 4 (CZAS - Time), and column 5 (RD - Round) */
@@ -287,13 +287,13 @@ body {
 
     /* Reduce left padding for the first column in the header row */
     .fights-record-table thead th:first-child {
-        padding-left: 8px; /* Adjust left padding for alignment */
+        padding-left: 10px; /* Adjust left padding for alignment */
     }
 
     /* Reduce right padding and center-align last column title */
     .fights-record-table thead th:last-child {
         text-align: center; /* Keep last column title centered */
-        padding-right: 8px; /* Reduce right padding */
+        padding-right: 10px; /* Reduce right padding */
     }
 
     /* Apply general padding to all table data cells */
@@ -303,12 +303,12 @@ body {
 
     /* Reduce left padding for the first column in table data */
     .fights-record-table tbody td:first-child {
-        padding-left: 8px; /* Align with first header column */
+        padding-left: 10px; /* Align with first header column */
     }
 
     /* Reduce right padding for the last column in table data */
     .fights-record-table tbody td:last-child {
-        padding-right: 8px; /* Keep last column balanced */
+        padding-right: 10px; /* Keep last column balanced */
     }
 
     /* Make text color slightly lighter and adjust weight for specific columns */
@@ -323,7 +323,7 @@ body {
         display: block; /* Ensures full-width alignment inside the cell */
         padding: 2px 2px 2px 2px; /* 2px top/bottom, 2px left/right for compact look */
         border-radius: 4px; /* Maintain rounded corners */
-        font-size: 12px; /* Reduce font size for better fit */
+        font-size: 13px; /* Reduce font size for better fit */
         font-weight: 600; /* Keep fight result tags bold */
         text-align: center; /* Center the text inside */
         margin: 0 auto; /* Center the result tag inside its cell */
@@ -332,7 +332,7 @@ body {
 
     /* Change Font Weight for All Table Cells EXCEPT First Row and Fight Results */
     .fights-record-table tbody td {
-        font-size: 12px; /* Reduce font size for better fit */
+        font-size: 13px; /* Reduce font size for better fit */
         font-weight: 500; /* Keep normal table text slightly bold */
     }
 }
