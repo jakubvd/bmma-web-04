@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // ✅ List of video IDs that SHOULD SHOW recommended videos (ALLOW-LIST)
         const allowRecommendations = [
-            "xAKqXcG3b7k", // OSTATNI ODCINEK Z ŹYCIA BZIKA
+            "_rPM9OF-AIE", // DZIEŃ ADRIANA BARTOSIŃSKIEGO
+            "7r6V8vAcwBg", // MOTORYKA z prof. PEPŁOWSKIM
+            "xAKqXcG3b7k", // "SPARING" z PAWLAKIEM
             "wF2eobbOGrs", // jak wyjść z balachy ?
             "VnyozbCzU6s", // Oficjalne OŚWIADCZENIE (Q&A)
             "7gv8e54TxdU"  // PRZEGRAŁEM
