@@ -1,5 +1,5 @@
 // Set the target date
-const targetDate = new Date("2025-04-01T22:00:00").getTime(); // Hardcoded date
+const targetDate = new Date("2025-04-26T19:00:00").getTime(); // Hardcoded date
 
 // Function to update the countdown
 function updateCountdown() {
